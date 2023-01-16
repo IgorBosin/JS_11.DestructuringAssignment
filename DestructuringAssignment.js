@@ -65,10 +65,32 @@ let user = {
 function myPerson() {
     return user.firstName
     
-function myPerson({ firstName }) {
+function myPerson( {firstName} ) {
     return firstName   
 }
     
 console.log(myPerson(user))
     
+
     
+Задача №5. Изменить функцию, чтоб внутри не обращаться к имени объекта
+
+let user = {
+    firstName: 'Igor',
+    lastName: 'Bosin',
+    age: 25,
+    info: {
+        work: false,
+        skills: ['html', 'css'],
+    }
+}
+    
+function myPerson() {
+    console.log( user.firstName, user.info.skills[1] )
+}    
+    
+function myPerson( {firstName, info: {skills: [,skillsCSS]}} ) {
+    console.log(firstName, skillsCSS)
+}
+    
+console.log(myPerson(user))    
