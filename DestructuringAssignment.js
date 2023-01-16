@@ -52,3 +52,23 @@ let user = {
 }
 let {info: {work, skills, skills: [a, b],}} = user
 console.log(work, skills, b)    
+
+    
+    
+Задача №4. Изменить функцию, чтоб внутри не обращаться к имени объекта
+
+let user = {
+    firstName: 'Igor',
+    lastName: 'Bosin',
+}
+
+function myPerson() {
+    return user.firstName
+    
+function myPerson({ firstName }) {
+    return firstName   
+}
+    
+console.log(myPerson(user))
+    
+    
