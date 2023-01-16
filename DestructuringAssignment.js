@@ -39,3 +39,16 @@ function topSalary(salaries) {
         }
     }
     return startKey
+    
+    
+    
+Задача №3. Вывести при помощи переменных: false, ['html', 'css'], 'css'
+let user = {
+    name: 'Igor',
+    info: {
+        work: false,
+        skills: ['html', 'css'],
+    }
+}
+let {info: {work, skills, skills: [a, b],}} = user
+console.log(work, skills, b)    
